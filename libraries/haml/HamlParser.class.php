@@ -1,15 +1,6 @@
 <?php
 /**
  * Haml parser.
- *
- * @link http://haml.hamptoncatlin.com/ Original Haml parser (for Ruby)
- * @license http://www.opensource.org/licenses/mit-license.php MIT (X11) License
- * @author Amadeusz Jasak <amadeusz.jasak@gmail.com>
- * @package phpHaml
- */
-
-/**
- * Haml parser.
  * 
  * @link http://haml.hamptoncatlin.com/ Original Haml parser (for Ruby)
  * @license http://www.opensource.org/licenses/mit-license.php MIT (X11) License
