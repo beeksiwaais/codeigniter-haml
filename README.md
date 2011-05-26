@@ -1,22 +1,20 @@
 # Codeigniter-HAML
 ## Use HAML with Codeigniter
 
-*Author* : Beeksi Waais
-*License* : MIT License
+>*Author* : Beeksi Waais
+>*License* : MIT License
 
 ### Installation
-+ 1. Add the files to their corresponding folder
-+ 2. Make the folder `core` writable if is not already.
-+ 3. You are done !!!.
++ Add the files to their corresponding folder
++ Make the folder `cache` writable if is not already.
++ You are done !!!.
 
 ### Usage
-+ 2. Create a HAML file in your views folder
-+ 3. Load the corresponding file with `$this->load->view('file.haml');`
++ Create a HAML file in your views folder
++ Load the corresponding file with `$this->load->view('file.haml');`
 
 ### Milestones :
-+ 1. Change HAML Parser
-
-
++ Change HAML Parser
 
 ### License
 
