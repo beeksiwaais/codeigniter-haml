@@ -82,28 +82,24 @@ class MY_Loader extends CI_Loader {
 		$_my_content = file_get_contents($_ci_path);
 			
 			// Convertie HAML en HTML
-			if(pathinfo($_ci_file, PATHINFO_EXTENSION) == "haml")
+			if($_ci_ext == "haml")
 			{
 			  
 			  require dirname(__DIR__) .'/libraries/haml/HamlParser.class.php';
 			  
 			  $_my_cache_path = APPPATH . '/cache';
 			  
-			  if(@opendir($_my_cache_path) === false) {
-			    @chmod($_my_cache_path, 0777);
-			    @mkdir($_my_cache_path, 0777, true);
-			  }
+			  @chmod($_my_cache_path, 0777);
 			  
 			  $_my_haml = new HamlParser($this->_ci_view_path, $_my_cache_path);
 			  
 			  // On sélectionne le fichier à convertir
 			  $_my_haml->setFile($_ci_file);
 		
-		    // On raison du comportement particulier de PhPHAML, on ajoute les données immédiatement
-		    // $_my_vars = array_merge($_ci_vars, $this);
-		    $_my_haml->append($_ci_vars);
+		      $_my_haml->append('ci', $this);
+		      $_my_haml->append($_ci_vars);
 			  
-			echo $_my_haml->render();
+			  echo $_my_haml->render();
 			
 			}
 			else

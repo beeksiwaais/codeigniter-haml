@@ -1,8 +1,0 @@
-Codeigniter-HAML
-Author : Beeksi Waais
-
-1. Replace your application/libraries folder with libraries folder.
-2. Create a HAML file in your views folder
-3. Load the file with "$this->load->view('file.haml');
-
-TODO :
